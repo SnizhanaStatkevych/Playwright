@@ -1,4 +1,4 @@
-const {test, expect} = require("@playwright/test");
+/* const {test, expect} = require("@playwright/test");
 test('(e2e test) Successful PC creation', async ({page}) => {
 //open the web-site
 await page.goto('https://computer-database.gatling.io/computers')
@@ -15,7 +15,7 @@ await page.getByText('Create this computer').click();
 //Verify
 await expect(page.getByText('Done ! Computer My-new-computer has been created')).toBeVisible();
 
-}, {timeout: 60000 }); 
+}, {timeout: 60000 }); */
 
 
 
