@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 
-test.only ('Test', async ({page}) => {
+test('Test', async ({page}) => {
 
     await page.goto("https://rahulshettyacademy.com/client");
     await page.locator("#userEmail").fill("anshika@gmail.com");
