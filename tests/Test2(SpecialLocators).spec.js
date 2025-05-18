@@ -2,7 +2,7 @@
 import { test, expect } from '@playwright/test';
 
 
-test.only('Playwright Special locators', async ({ page }) => {
+test('Playwright Special locators', async ({ page }) => {
 
     await page.goto("https://rahulshettyacademy.com/angularpractice/");
     await page.getByLabel("Check me out if you Love IceCreams!").click()
@@ -13,7 +13,7 @@ test.only('Playwright Special locators', async ({ page }) => {
     await page.getByText("Success! The Form has been submitted successfully!.").isVisible();
     await page.getByRole("link", { name: "Shop" }).click();
     await page.locator("app-card").filter({ hasText: 'Nokia Edge' }).getByRole('button', { name: "Add" }).click();
-    //але можна без add, бо там тількт один аргумент , одна кнопка add 
+    //але можна без add, бо там тільки один аргумент , одна кнопка add 
 
 
 

@@ -4,6 +4,7 @@ import { test, expect } from '@playwright/test';
 
 test('E2E Test', async ({ page }) => {
 
+    
     const email = "snizhana.statkevych1501@gmail.com";
     const productName = 'ZARA COAT 3';
     const products = page.locator(".card-body b");
@@ -17,7 +18,7 @@ test('E2E Test', async ({ page }) => {
 
     console.log(titles)
 
-
+//loop for selecting one product from the list of products by clicking to the "Add To Cart" button
     const count = await products.count();
     for (let i = 0; i < count; ++i) {
         if (await products.nth(i).textContent() === productName) {
@@ -29,7 +30,7 @@ test('E2E Test', async ({ page }) => {
 
 
     await page.locator("[routerlink*= 'cart']").click();
-    await page.locator("div li").first().waitFor();
+    await page.locator("div li").first().waitFor(); //waiting for elements in the cart
     const bool = await page.locator('h3:has-text("ZARA COAT 3")').isVisible();
     expect(bool).toBeTruthy()
     await page.locator("text = Checkout").click();
